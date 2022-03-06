@@ -1,4 +1,6 @@
+#file
 File_object = open(r"new.S","r")
+#variable
 arrinst = '.word'
 arrinst1 = ','
 inst1 = '__start:'
@@ -127,10 +129,6 @@ while (for_i<len(rawdata)):
     for_i = for_i + 1
 
 
-
-print(inst)
-print(data)
-print(arr)
 
 
 
