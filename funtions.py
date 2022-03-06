@@ -1,21 +1,32 @@
+
+def index1(k, arinst):
+    p = 0
+    while (p < len(arinst)):
+        if arinst[p]==k:
+            return k;
+        p = p + 1
+    return -1
+
+
 def add(r2, r3):
     return r2 + r3
 
 
-def addi(r2,n):
-    return r2+n
+def addi(r2, n):
+    return r2 + n
+
 
 def sub(r2, r3):
     return r2 - r3
 
 
-def bne(r1, r2, label):
+def bne(r1, r2, label,inst1):
     if r1 != r2:
-        label
+        return index1(label,inst1)
 
 
-def j(label):
-    label
+def j(label, inst1):
+    return index1(label,inst1)
 
 
 def lw(n, r2):
@@ -77,37 +88,36 @@ k = 0
 for i in range(sz):
 
     if instr[i] == "add":
-        dat[j+1] = num[k]
-        dat[j+2] = num[k+1]
-        dat[j] = add(dat[j+1], dat[j+2])
-        j = j+3
-        k = k+2
+        dat[j + 1] = num[k]
+        dat[j + 2] = num[k + 1]
+        dat[j] = add(dat[j + 1], dat[j + 2])
+        j = j + 3
+        k = k + 2
     elif instr[i] == "addi":
-        dat[j] = add(dat[j+1], num[k])
-        j = j+2
-        k = k+1
+        dat[j] = add(dat[j + 1], num[k])
+        j = j + 2
+        k = k + 1
     elif instr[i] == "sub":
-        dat[j+1] = num[k]
-        dat[j+2] = num[k+1]
-        dat[j] = sub(dat[j+1], dat[j+2])
-        j = j+3
-        k = k+2
+        dat[j + 1] = num[k]
+        dat[j + 2] = num[k + 1]
+        dat[j] = sub(dat[j + 1], dat[j + 2])
+        j = j + 3
+        k = k + 2
     elif instr[i] == "mov":
-        dat[j+1] = num[k]
-        dat[j] = mov(dat[j+1])
-        j = j+2
-        k = k+1
+        dat[j + 1] = num[k]
+        dat[j] = mov(dat[j + 1])
+        j = j + 2
+        k = k + 1
     elif instr[i] == "lw":
-        dat[j+1] = num[k]
-        dat[j+2] = num[k+1]
-        dat[j] = lw(dat[j+1], dat[j+2])
-        j = j+3
-        k = k+2
+        dat[j + 1] = num[k]
+        dat[j + 2] = num[k + 1]
+        dat[j] = lw(dat[j + 1], dat[j + 2])
+        j = j + 3
+        k = k + 2
     elif instr[i] == "li":
-        dat[j+1] = data[j+1]
-        dat[j] = li(dat[j], dat[j+1])
-        j = j+2
-
+        dat[j + 1] = data[j + 1]
+        dat[j] = li(dat[j], dat[j + 1])
+        j = j + 2
 
 for i in range(siz):
     if data[i] == "ra":
