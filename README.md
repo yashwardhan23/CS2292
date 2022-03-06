@@ -17,4 +17,4 @@
     - addi
 - The simulator supports at least 4KB of memory.
 - The simulator reads in an assembly(.S), executes the instructions, and in the end display the contents of the register, and the memory.
-- Language used for development Python.
+- Language used for development is Python.
