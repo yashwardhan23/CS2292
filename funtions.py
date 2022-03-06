@@ -2,6 +2,9 @@ def add(r2, r3):
     return r2 + r3
 
 
+def addi(r2,n):
+    return r2+n
+
 def sub(r2, r3):
     return r2 - r3
 
@@ -11,7 +14,7 @@ def bne(r1, r2, label):
         label
 
 
-def jal(label):
+def j(label):
     label
 
 
@@ -79,6 +82,10 @@ for i in range(sz):
         dat[j] = add(dat[j+1], dat[j+2])
         j = j+3
         k = k+2
+    elif instr[i] == "addi":
+        dat[j] = add(dat[j+1], num[k])
+        j = j+2
+        k = k+1
     elif instr[i] == "sub":
         dat[j+1] = num[k]
         dat[j+2] = num[k+1]
