@@ -2,8 +2,8 @@
 
 ## Developers:
 
-- Yashwardhan Singh Chandrawat(CS20b052)
--  Sala Pavan Sai Teja Kishore(CS20B035)
+- Yashwardhan Singh Chandrawat (CS20b052)
+-  Sala Pavan Sai Teja Kishore (CS20B035)
 
 ## PHASE_1
 
